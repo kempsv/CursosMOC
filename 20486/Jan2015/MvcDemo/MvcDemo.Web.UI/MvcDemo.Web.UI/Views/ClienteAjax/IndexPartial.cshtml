@@ -1,0 +1,272 @@
+﻿@model IEnumerable<MvcDemo.Model.Entities.Cliente>
+
+ <script type="text/javascript">
+
+    $(document).ready(function () {
+        $.ajaxSetup({ cache: false }); // No Cache on Jquery
+
+        ////////////////////////////////////////////////////
+        // JQuery Events
+        // Setup the Div to be loaded on Dialog mode
+        $("#dvFormSaveOrUpdate").dialog({
+            autoOpen: false,
+            height: 450,
+            width: 450,
+            modal: true,
+            buttons: {
+                'OK': function () {
+                    pegaDados();
+                },
+                Cancel: function () {
+                    $(this).dialog('close')
+                }
+            },
+            close: function () {
+                $(this).dialog('close')
+            }
+        });
+
+        $("#addNovoCliente").click(function () {
+            event.preventDefault();
+
+            //Clean the FORM
+            CleanForm();
+
+            // Set Action to determine Post
+            $("#Action").val('Create');
+
+            $("#dvFormSaveOrUpdate").dialog('open');
+        });
+
+        $('.Details').click(function () {
+            event.preventDefault();
+
+            $.ajax({
+                url: $(this).attr("href"),
+                contentType: 'application/json; charset=utf-8',
+                dataType: "json",
+                type: 'GET',
+                dataType: 'html',
+                success: function (result) {
+                    $('#dvDetails').html(result)
+                    $("#dvDetails").dialog('open');
+                }
+            });
+        });
+
+        $(".Delete").click(function (event) {
+            event.preventDefault();
+
+            $("#UrlActionToDelete").val($(this).attr("href"));
+
+            $("#dvFormularioDelete").dialog('open');
+        })
+
+        $('.Edit').click(function () {
+            //debugger;
+            event.preventDefault();
+
+            //Clean the FORM
+            CleanForm();
+
+            // Chamar Server e Retornar Json
+            $.ajax({
+                dataType: "json",
+                type: 'GET',
+                url: $(this).attr("href"),
+                success: function (result) {
+                    //debugger;
+                    $("#Id").val(result.Id);
+                    $("#Nome").val(result.Nome);
+                    $("#Endereco").val(result.Endereco);
+                    $("#Email").val(result.Email);
+                    $("#Idade").val(result.Idade);
+
+                    // Set Action to determine Post
+                    $("#Action").val('Edit');
+
+                    $("#dvFormSaveOrUpdate").dialog('open');
+                },
+                error: function (error) {
+                    var errorObject = JSON.parse(error.responseText);
+                    alert(errorObject.message);
+                }
+            });
+        });
+
+        $("#dvDetails").dialog({
+            closeOnEscape: false,
+            bgiframe: true,
+            autoOpen: false,
+            resizable: true,
+            modal: true,
+            height: 300,
+            width: 400,
+            buttons: {
+                'Voltar': function () {
+                    $(this).dialog('close')
+                }
+            }
+        });
+
+        $("#dvFormularioDelete").dialog({
+            bgiframe: true,
+            autoOpen: false,
+            resizable: false,
+            modal: true,
+            height: 260,
+            width: 390,
+            buttons: {
+                'Excluir': function () {
+                    $(document).ready(function () {
+                        _urlAction = $("#UrlActionToDelete").val();
+                        $.post(_urlAction, null, pegaDadosCB, "json");
+                    });
+                },
+                'Cancelar': function () {
+                    $(this).dialog('close');
+                }
+            }
+        });
+        ////////////////////////////////////////////////////
+
+        ////////////////////////////////////////////////////
+        //Functions
+        function fnLoadPagePartialView() {
+            url = '@Url.Action("IndexPartial")';
+
+            $("#dvLoading").slideDown("fast").text("Loading...");
+
+            // Animate
+            $(function () { $('#viewPartial').fadeOut('normal'); });
+
+            $('#viewPartial').load(url, null, function (html) {
+                $('#viewPartial').html(html);
+                // Animate
+                $(function () { $('#viewPartial').fadeIn('normal'); });
+
+                $("#dvLoading").slideUp("slow", function () { $(this).text(""); });
+            });
+        }
+
+        function CleanForm()
+        {
+            $("#operationMessage").remove();
+            $("#Id").val('');
+            $("#Nome").val('').removeClass('input-validation-error');
+            $("#Endereco").val('').removeClass('input-validation-error');
+            $("#Email").val('').removeClass('input-validation-error');
+            $("#Idade").val('').removeClass('input-validation-error');
+        }
+
+        function alerta(texto, sucesso) {
+            var htmlDialogo = "";
+            $("#caixaAlerta").remove();
+            htmlDialogo = "<div id='caixaAlerta' title='Alerta'><p>" + texto + "</p></div>";
+            $("body").append(htmlDialogo);
+
+            $("#caixaAlerta").dialog({
+                bgiframe: true,
+                autoOpen: false,
+                resizable: false,
+                modal: true,
+                buttons: {
+                    Ok: function () {
+                        $('#operationMessage').remove();
+                        if (sucesso) {
+                            fnLoadPagePartialView();
+                            $(this).dialog('close');
+                            $("#dvFormSaveOrUpdate").dialog('close');
+                            $("#dvFormularioDelete").dialog('close');
+                        } else
+                            $(this).dialog('close');
+                    }
+                }
+            }).dialog('open');
+        }
+
+        function handleErrorMessage(result) {
+            $("#operationMessage").remove();
+            html = "<div id='operationMessage'><ul></ul></div>";
+            $("form").append(html);
+            $('#operationMessage').hide();
+
+            $('#operationMessage').append('<span><br>' + result.Message + '</span>')
+                             .removeClass('success')
+                             .addClass('error');
+
+            for (var err in result.Errors) {
+                var propertyName = result.Errors[err].PropertyName;
+                var errorMessage = result.Errors[err].Error;
+                var message = propertyName + ' ' + errorMessage;
+
+                $('#' + propertyName).addClass('input-validation-error');
+                $('#operationMessage > ul').append('<li># ' + message + '</li>');
+            }
+        }
+
+        function pegaDados() {
+            var action = $("#Action").val();
+            if (action == "Create")
+                _urlAction = '@Url.Action("Create")';
+            else
+                _urlAction = '@Url.Action("Edit")';
+
+            var _formData = $("form").serialize();
+            $.post(_urlAction, _formData, pegaDadosCB, "json");
+        }
+        function pegaDadosCB(json) {
+            if (json.Successfull == true) {
+                alerta(json.Message, json.Successfull);
+            } else {
+                alerta("Erro: " + json.Message);
+                if (null != json.Errors)
+                    handleErrorMessage(json, json.Successfull);
+            }
+        }
+        ////////////////////////////////////////////////////
+    });
+    
+</script>
+
+@Html.MvcSiteMap().SiteMapPath() @*Breadcrumb Trail: *@
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Endereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Idade)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Endereco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Idade)
+        </td>
+        <td>
+            <a href="@Url.Action("Edit")/@item.Id" class="Edit">Edit</a> |
+            <a href="@Url.Action("Details")/@item.Id" class="Details">Details</a> |
+            <a href="@Url.Action("Delete")/@item.Id" class="Delete">Delete</a>
+        </td>
+    </tr>
+}
+
+</table>

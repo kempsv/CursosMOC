@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        function getTextBoxContent() {
+            return $('#ValueTyped').val();
+        }
+        $('#JQueryAjax').click(function () {
+            var search = getTextBoxContent();
+            //var search = $('#ValueTyped').val()
+            var dataToPost = { Name: search, Numbers: [1, 45, 67, 89] };
+            $.ajax({
+                url: '@Url.Action("Search")',
+                contentType: 'application/json; charset=utf-8',
+                type: 'POST',
+                dataType: 'html',
+                data: JSON.stringify(dataToPost),
+                success: function (result) {
+                    $('#ResponseSearch').html(result);
+                }
+            });
+            return false;
+        });
+    });
+
+</script>
+
+<h2>Sample 1</h2>
+
+@Ajax.ActionLink(
+   "Get Server Time",
+   "GetServerTime",
+   new AjaxOptions{
+      HttpMethod = "GET",
+      UpdateTargetId = "ResponseActionLink",
+      InsertionMode = InsertionMode.Replace
+   }
+)
+<div id="ResponseActionLink"></div>
+<br />
+
+<h2>Sample 2</h2>
+<input type="text" id="ValueTyped" />
+<input type="button" id="JQueryAjax" value="Search"/>
+<div id="ResponseSearch"></div>
+
+<h2>Sample 3</h2>
+@Html.Action("GetAllEstados")

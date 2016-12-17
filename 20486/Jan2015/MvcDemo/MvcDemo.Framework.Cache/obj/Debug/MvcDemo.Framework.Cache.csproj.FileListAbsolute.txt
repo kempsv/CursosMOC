@@ -1,0 +1,8 @@
+C:\MCT\20486\Jan2015\MvcDemo\MvcDemo.Framework.Cache\bin\Debug\MvcDemo.Framework.Cache.dll
+C:\MCT\20486\Jan2015\MvcDemo\MvcDemo.Framework.Cache\bin\Debug\MvcDemo.Framework.Cache.pdb
+C:\MCT\20486\Jan2015\MvcDemo\MvcDemo.Framework.Cache\obj\Debug\MvcDemo.Framework.Cache.dll
+C:\MCT\20486\Jan2015\MvcDemo\MvcDemo.Framework.Cache\obj\Debug\MvcDemo.Framework.Cache.pdb
+C:\Projetos\CursosMOC\20486\Jan2015\MvcDemo\MvcDemo.Framework.Cache\bin\Debug\MvcDemo.Framework.Cache.dll
+C:\Projetos\CursosMOC\20486\Jan2015\MvcDemo\MvcDemo.Framework.Cache\bin\Debug\MvcDemo.Framework.Cache.pdb
+C:\Projetos\CursosMOC\20486\Jan2015\MvcDemo\MvcDemo.Framework.Cache\obj\Debug\MvcDemo.Framework.Cache.dll
+C:\Projetos\CursosMOC\20486\Jan2015\MvcDemo\MvcDemo.Framework.Cache\obj\Debug\MvcDemo.Framework.Cache.pdb

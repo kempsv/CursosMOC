@@ -1,0 +1,6 @@
+C:\MCT\20486\Ago2014\WebSocket\WSChat\WSChat\WSChatClient\bin\Debug\WSChatClient.exe.config
+C:\MCT\20486\Ago2014\WebSocket\WSChat\WSChat\WSChatClient\bin\Debug\WSChatClient.exe
+C:\MCT\20486\Ago2014\WebSocket\WSChat\WSChat\WSChatClient\bin\Debug\WSChatClient.pdb
+C:\MCT\20486\Ago2014\WebSocket\WSChat\WSChat\WSChatClient\obj\Debug\WSChatClient.csprojResolveAssemblyReference.cache
+C:\MCT\20486\Ago2014\WebSocket\WSChat\WSChat\WSChatClient\obj\Debug\WSChatClient.exe
+C:\MCT\20486\Ago2014\WebSocket\WSChat\WSChat\WSChatClient\obj\Debug\WSChatClient.pdb

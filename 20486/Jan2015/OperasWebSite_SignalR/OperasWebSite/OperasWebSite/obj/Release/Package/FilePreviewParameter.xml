@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="OperaDemo" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\MCT\\20486\\Ago2014\\Allfiles\\Democode\\Mod15\\OperasWebSite\\OperasWebSite\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\MCT\\20486\\Ago2014\\Allfiles\\Democode\\Mod15\\OperasWebSite\\OperasWebSite\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\aspnetdb.mdf;Integrated Security=SSPI;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\MCT\\20486\\Ago2014\\Allfiles\\Democode\\Mod15\\OperasWebSite\\OperasWebSite\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="OperasDB-Web.config Connection String" description="" value="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Operas.mdf;Integrated Security=True" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\MCT\\20486\\Ago2014\\Allfiles\\Democode\\Mod15\\OperasWebSite\\OperasWebSite\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='OperasDB']/@connectionString" />
+  </parameter>
+</parameters>

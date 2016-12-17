@@ -1,0 +1,4 @@
+C:\Projetos\Orbiz\Source\Repos\PowerFrameNet.ServiceManager\bin\Debug\PowerFrameNet.Wcf.ServiceManager.dll
+C:\Projetos\Orbiz\Source\Repos\PowerFrameNet.ServiceManager\bin\Debug\PowerFrameNet.Wcf.ServiceManager.pdb
+C:\Projetos\Orbiz\Source\Repos\PowerFrameNet.ServiceManager\obj\Debug\PowerFrameNet.Wcf.ServiceManager.dll
+C:\Projetos\Orbiz\Source\Repos\PowerFrameNet.ServiceManager\obj\Debug\PowerFrameNet.Wcf.ServiceManager.pdb

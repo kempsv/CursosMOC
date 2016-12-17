@@ -1,0 +1,9 @@
+C:\MCT\20486\Jan2015\MvcDemo\MvcDemo.Framework.Wcf.ServiceManager\bin\Debug\MvcDemo.Framework.Wcf.ServiceManager.dll
+C:\MCT\20486\Jan2015\MvcDemo\MvcDemo.Framework.Wcf.ServiceManager\bin\Debug\MvcDemo.Framework.Wcf.ServiceManager.pdb
+C:\MCT\20486\Jan2015\MvcDemo\MvcDemo.Framework.Wcf.ServiceManager\obj\Debug\MvcDemo.Framework.Wcf.ServiceManager.dll
+C:\MCT\20486\Jan2015\MvcDemo\MvcDemo.Framework.Wcf.ServiceManager\obj\Debug\MvcDemo.Framework.Wcf.ServiceManager.pdb
+C:\Projetos\CursosMOC\20486\Jan2015\MvcDemo\MvcDemo.Framework.Wcf.ServiceManager\bin\Debug\MvcDemo.Framework.Wcf.ServiceManager.dll
+C:\Projetos\CursosMOC\20486\Jan2015\MvcDemo\MvcDemo.Framework.Wcf.ServiceManager\bin\Debug\MvcDemo.Framework.Wcf.ServiceManager.pdb
+C:\Projetos\CursosMOC\20486\Jan2015\MvcDemo\MvcDemo.Framework.Wcf.ServiceManager\obj\Debug\MvcDemo.Framework.Wcf.ServiceManager.csprojResolveAssemblyReference.cache
+C:\Projetos\CursosMOC\20486\Jan2015\MvcDemo\MvcDemo.Framework.Wcf.ServiceManager\obj\Debug\MvcDemo.Framework.Wcf.ServiceManager.dll
+C:\Projetos\CursosMOC\20486\Jan2015\MvcDemo\MvcDemo.Framework.Wcf.ServiceManager\obj\Debug\MvcDemo.Framework.Wcf.ServiceManager.pdb

@@ -1,0 +1,16 @@
+C:\MCT\20486\Jan2015\MvcDemo\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\MCT\20486\Jan2015\MvcDemo\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\MCT\20486\Jan2015\MvcDemo\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\MCT\20486\Jan2015\MvcDemo\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\MCT\20486\Jan2015\MvcDemo\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\MCT\20486\Jan2015\MvcDemo\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\MCT\20486\Jan2015\MvcDemo\ConsoleApplication1\bin\Debug\MvcDemo.Core.Common.dll
+C:\MCT\20486\Jan2015\MvcDemo\ConsoleApplication1\bin\Debug\MvcDemo.Framework.Wcf.ServiceManager.dll
+C:\MCT\20486\Jan2015\MvcDemo\ConsoleApplication1\bin\Debug\MvcDemo.Model.Entities.dll
+C:\MCT\20486\Jan2015\MvcDemo\ConsoleApplication1\bin\Debug\MvcDemo.Services.ClientManagement.dll
+C:\MCT\20486\Jan2015\MvcDemo\ConsoleApplication1\bin\Debug\EntityFramework.dll
+C:\MCT\20486\Jan2015\MvcDemo\ConsoleApplication1\bin\Debug\MvcDemo.Core.Common.pdb
+C:\MCT\20486\Jan2015\MvcDemo\ConsoleApplication1\bin\Debug\MvcDemo.Framework.Wcf.ServiceManager.pdb
+C:\MCT\20486\Jan2015\MvcDemo\ConsoleApplication1\bin\Debug\MvcDemo.Model.Entities.pdb
+C:\MCT\20486\Jan2015\MvcDemo\ConsoleApplication1\bin\Debug\MvcDemo.Services.ClientManagement.pdb
+C:\MCT\20486\Jan2015\MvcDemo\ConsoleApplication1\bin\Debug\EntityFramework.xml

@@ -1,0 +1,10 @@
+C:\MCT\20486\Jan2015\MvcDemo\MvcDemo.Model.Entities\bin\Debug\MvcDemo.Model.Entities.dll
+C:\MCT\20486\Jan2015\MvcDemo\MvcDemo.Model.Entities\bin\Debug\MvcDemo.Model.Entities.pdb
+C:\MCT\20486\Jan2015\MvcDemo\MvcDemo.Model.Entities\obj\Debug\MvcDemo.Model.Entities.dll
+C:\MCT\20486\Jan2015\MvcDemo\MvcDemo.Model.Entities\obj\Debug\MvcDemo.Model.Entities.pdb
+C:\MCT\20486\Jan2015\MvcDemo\MvcDemo.Model.Entities\obj\Debug\MvcDemo.Model.Entities.csprojResolveAssemblyReference.cache
+C:\Projetos\CursosMOC\20486\Jan2015\MvcDemo\MvcDemo.Model.Entities\bin\Debug\MvcDemo.Model.Entities.dll
+C:\Projetos\CursosMOC\20486\Jan2015\MvcDemo\MvcDemo.Model.Entities\bin\Debug\MvcDemo.Model.Entities.pdb
+C:\Projetos\CursosMOC\20486\Jan2015\MvcDemo\MvcDemo.Model.Entities\obj\Debug\MvcDemo.Model.Entities.csprojResolveAssemblyReference.cache
+C:\Projetos\CursosMOC\20486\Jan2015\MvcDemo\MvcDemo.Model.Entities\obj\Debug\MvcDemo.Model.Entities.dll
+C:\Projetos\CursosMOC\20486\Jan2015\MvcDemo\MvcDemo.Model.Entities\obj\Debug\MvcDemo.Model.Entities.pdb

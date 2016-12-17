@@ -1,0 +1,49 @@
+﻿<script type="text/javascript">
+    $(document).ready(function () {
+            $.ajaxSetup({ cache: false });
+
+            $("#Ufs").change(function () {
+                listaCidade($(this).val());
+            });
+    });
+
+    //chamada ajax para a Action ListaCidade 
+    //passando como parâmetro a Estado selecionado
+    function listaCidade(sigla) {
+
+        //$.getJSON('@Url.Action("GetCidadeBySigla")/' + sigla, listaCidadeCallBack);
+
+        $.ajax({
+            dataType: "json",
+            type: 'GET',
+            url: '@Url.Action("GetCidadeBySigla")' + '/' + sigla,
+            success: function (result) {
+                listaCidadeCallBack(result);
+            },
+            error: function (error) {
+                var errorObject = JSON.parse(error.responseText);
+                //$("#errorMessage").text(errorObject.message);
+                alert(errorObject.message);
+            }
+        });
+    }
+    
+    //função que irá ser chamada quando terminar
+    //a chamada ajax
+    function listaCidadeCallBack(json) {
+        //Limpar os itens que são maiores que 0
+        //Ou seja: não retirar o primeiro item
+        $("#Cidades :gt(0)").remove();
+        $(json).each(function () {
+            //adicionando as opções de acordo com o retorno
+            $("#Cidades").append("<option value='" + this.Nome + "'>" + this.Nome + "</option>");
+        });
+    }
+
+</script>
+
+@Html.DropDownList("Ufs","Estado")
+
+<select id="Cidades">
+        <option selected="selected" value="">Cidade</option>
+</select>

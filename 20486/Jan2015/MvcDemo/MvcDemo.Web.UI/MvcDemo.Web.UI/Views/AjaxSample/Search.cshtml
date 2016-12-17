@@ -1,0 +1,20 @@
+﻿@model MvcDemo.Model.Entities.SearchResponseModel
+
+<div>
+<div class="display-label">
+    Name: @Html.DisplayFor(m => m.Name)
+</div>
+<div class="display-label">
+    Current Date Time: @Html.DisplayFor(m => m.CurrentDateTime)
+</div>
+@{
+    var numbersCount = Model.Numbers.Count;
+
+    for(int numberIndex = 0; numberIndex < numbersCount; numberIndex++)
+    {
+        <div class="display-label">
+            Number: @numberIndex = @Html.DisplayFor(m => m.Numbers[numberIndex])
+        </div>
+    }
+}
+</div>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\MCT\20486\Ago2014\Allfiles\Democode\Mod15\OperasWebSite\OperasWebSite\obj\Release\Package\PackageTmp" managedRuntimeVersion="v4.0" />
+  <setAcl path="C:\MCT\20486\Ago2014\Allfiles\Democode\Mod15\OperasWebSite\OperasWebSite\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\MCT\20486\Ago2014\Allfiles\Democode\Mod15\OperasWebSite\OperasWebSite\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>

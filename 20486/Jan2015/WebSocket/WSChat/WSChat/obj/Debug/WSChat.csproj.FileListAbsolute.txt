@@ -1,0 +1,5 @@
+C:\MCT\20486\Ago2014\WebSocket\WSChat\WSChat\bin\WSChat.dll
+C:\MCT\20486\Ago2014\WebSocket\WSChat\WSChat\bin\WSChat.pdb
+C:\MCT\20486\Ago2014\WebSocket\WSChat\WSChat\obj\Debug\WSChat.csprojResolveAssemblyReference.cache
+C:\MCT\20486\Ago2014\WebSocket\WSChat\WSChat\obj\Debug\WSChat.dll
+C:\MCT\20486\Ago2014\WebSocket\WSChat\WSChat\obj\Debug\WSChat.pdb
